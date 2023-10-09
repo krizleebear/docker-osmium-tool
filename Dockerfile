@@ -1,4 +1,4 @@
-FROM ubuntu:18.04
+FROM ubuntu:22.04
 
 RUN apt-get update && apt-get install -y \
 	cmake \
@@ -16,3 +16,5 @@ RUN mkdir work && cd work && \
 	make && \
 	ln -s /work/osmium-tool/build/osmium /usr/bin/osmium
 	
+ENTRYPOINT /usr/bin/osmium
+
