@@ -19,7 +19,8 @@ RUN mkdir work && cd work && \
 FROM ubuntu:22.04 as deploy
 
 RUN apt-get update && apt-get install -y \
-	libboost-program-options1.74.0 libbz2-1.0 zlib1g libexpat1
+	libboost-program-options1.74.0 libbz2-1.0 zlib1g libexpat1 \
+ && rm -rf /var/lib/apt/lists/*
 
 COPY --from=build /work/osmium-tool/build/src/osmium /usr/bin/osmium
 
