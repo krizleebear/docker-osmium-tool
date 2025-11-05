@@ -30,7 +30,7 @@ RUN apt-get update && apt-get install -y \
 COPY --from=build /work/osmium-tool/build/src/osmium /usr/bin/osmium
 
 RUN groupadd -r osmtools && useradd -r -g osmtools osmtools
-USER osmtools
+#USER osmtools
 
 LABEL org.opencontainers.image.source="https://github.com/krizleebear/docker-osmium-tool"
 LABEL org.opencontainers.image.description="Osmium Command Line Tool"
