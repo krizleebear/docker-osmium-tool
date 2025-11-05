@@ -36,4 +36,4 @@ LABEL org.opencontainers.image.source="https://github.com/krizleebear/docker-osm
 LABEL org.opencontainers.image.description="Osmium Command Line Tool"
 LABEL org.opencontainers.image.version="${OSMIUM_VERSION}"
 
-ENTRYPOINT ["/usr/bin/osmium"]
+CMD ["/usr/bin/osmium"]
